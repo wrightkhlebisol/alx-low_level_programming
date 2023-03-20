@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.h>
 
 /**
 * main - start the app
@@ -9,13 +8,16 @@
 
 int main(void)
 {
-	for (char x = 'A'; x <= 'Z'; x++)
+	char x;
+
+	for (x = 'a'; x <= 'z'; x++)
 	{
-		putchar(tolower(x));
+		putchar(x);
 	}
-	for (char x = 'A'; x <= 'Z'; x++)
-        {
-                putchar(x);
-        }
+
+	for (x = 'A'; x <= 'Z'; x++)
+	{
+		putchar(x);
+	}
 	return (0);
 }
