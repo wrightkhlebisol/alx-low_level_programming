@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.h>
 
 /**
 * main - start the app
@@ -11,9 +10,13 @@ int main(void)
 {
 	int x;
 
-	for (x = '0x0'; x <= '0x0'; x++)
+	for (x = 0; x < 10; x++)
 	{
-		printf("%d", x);
+		putchar('0' + x);
+	}
+	for (x = 'a'; x  <= 'f'; x++)
+	{
+		putchar (x);
 	}
 	putchar('\n');
 	return (0);
