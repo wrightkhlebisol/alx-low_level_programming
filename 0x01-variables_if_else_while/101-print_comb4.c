@@ -3,7 +3,7 @@
 /**
 * main - start the app
 *
-* Return: 1
+* Return: 0
 */
 
 int main(void)
@@ -33,5 +33,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	return (1);
+	return (0);
 }
