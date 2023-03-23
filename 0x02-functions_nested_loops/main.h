@@ -1,2 +1,2 @@
 int _putchar(char);
-int _abs(int);
+int print_sign(int);
