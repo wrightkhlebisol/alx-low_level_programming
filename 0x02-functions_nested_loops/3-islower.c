@@ -1,13 +1,22 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
-* main - start the app
+* _islower - checks lowercase character
+* @c: character to check
 *
-* Return: 1
+* Return: always 0
 */
 
-int main(void)
+int _islower(int c)
 {
-	
-	return (1);
+	if (c >= 'a' && c <= 'z')
+	{
+		_putchar(1);
+	}
+	else
+	{
+		_putchar(0);
+	}
+	return (0);
 }
