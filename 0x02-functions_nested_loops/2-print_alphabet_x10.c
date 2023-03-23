@@ -1,13 +1,24 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
-* main - start the app
+* print_alphabet_x10 - prints lowercase alphabet
 *
-* Return: 1
+* Return: nothing (void)
 */
 
-int main(void)
+void print_alphabet_x10(void)
 {
-	
-	return (1);
+	int x;
+	int i = 0;
+
+	while (i < 10)
+	{
+		for (x = 'a'; x <= 'z'; x++)
+		{
+			_putchar(x);
+		}
+		i++;
+		_putchar('\n');
+	}
 }
