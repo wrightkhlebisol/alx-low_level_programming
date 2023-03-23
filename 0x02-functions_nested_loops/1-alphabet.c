@@ -3,9 +3,9 @@
 #include "main.h"
 
 /**
-* main - start the app
+* print_alphabet - prints lowercase alphabet
 *
-* Return: always 0
+* Return: nothing (void)
 */
 
 void print_alphabet(void)
@@ -17,5 +17,4 @@ void print_alphabet(void)
 		_putchar(x);
 	}
 	_putchar('\n');
-	return (0);
 }
