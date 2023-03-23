@@ -1,13 +1,14 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
-* main - start the app
+* _abs - Computes absolute value of an integer
+* @c: character to check
 *
-* Return: 1
+* Return: 1 or 0
 */
 
-int main(void)
+int _abs(int c)
 {
-	
-	return (1);
+	return (c / -1);
 }

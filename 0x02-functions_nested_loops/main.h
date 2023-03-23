@@ -1,2 +1,2 @@
 int _putchar(char);
-int _isalpha(int);
+int _abs(int);
