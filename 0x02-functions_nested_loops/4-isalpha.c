@@ -1,13 +1,21 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
-* main - start the app
+* _isalpha - checks if input is an alphabet
+* @c: character to check
 *
-* Return: 1
+* Return: 1 or 0
 */
 
-int main(void)
+int _isalpha(int c)
 {
-	
-	return (1);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
