@@ -3,6 +3,7 @@
 
 /**
 * print_line - prints _ n times
+* @n: number of _ to print
 */
 
 void print_line(int n)
