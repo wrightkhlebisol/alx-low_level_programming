@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	print_line(40);	
+	print_line(10);	
 }
 
 void print_line(int n)
