@@ -10,8 +10,9 @@
 
 int main(void)
 {
-	int n = 5;
-	
+	int n = -13;
+	int i;
+		
 	if (n <= 0)
         {
                 _putchar('\n');
