@@ -10,12 +10,18 @@
 
 int main(void)
 {
-        int i;
-
-        for (i = 48; i <= 57; i++)
+	int n = 5;
+	
+	if (n <= 0)
         {
-                _putchar(i);
+                _putchar('\n');
         }
-        _putchar('\n');
-        return (0);
+        else
+        {
+                for (i = 0; i < n; i++)
+                {
+                        _putchar('_');
+                }
+                _putchar('\n');
+        }
 }
