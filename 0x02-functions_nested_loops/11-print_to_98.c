@@ -16,7 +16,7 @@ void print_to_98(int n)
 			printf("%d, ", n);
 			n++;
 		}
-		put('\n');
+		puts('\n');
 	}
 	else
 	{
@@ -25,6 +25,6 @@ void print_to_98(int n)
 			printf("%d, ", n);
 			n--;
 		}
-		put('\n');
+		puts('\n');
 	}
 }
