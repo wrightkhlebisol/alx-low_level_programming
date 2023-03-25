@@ -1,13 +1,14 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
-* main - start the app
+* print_last_digit - Print last digit
+* @c: integer to get last digit of
 *
-* Return: 1
+* Return: void
 */
 
-int main(void)
+int print_last_digit(int c)
 {
-	
-	return (1);
+	printf(c % 10);
 }
