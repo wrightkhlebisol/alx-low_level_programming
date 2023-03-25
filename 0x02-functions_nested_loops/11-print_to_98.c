@@ -20,7 +20,6 @@ void print_to_98(int n)
 			}
 			n++;
 		}
-		puts("\n");
 	}
 	else
 	{
@@ -33,6 +32,5 @@ void print_to_98(int n)
 			}
 			n--;
 		}
-		puts("\n");
 	}
 }
