@@ -1,13 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main - start the app
+* print_to_98 - print from n to 98
+* @n: start point
 *
-* Return: 1
+* Return: nothing
 */
 
-int main(void)
+void print_to_98(int n)
 {
-	
-	return (1);
+	while(n <= 98)
+	{
+		_putchar(n);
+		n++;
+	}
 }
