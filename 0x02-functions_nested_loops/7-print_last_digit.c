@@ -2,7 +2,7 @@
 
 /**
 * print_last_digit - Print last digit
-* @c: integer to get last digit of
+* @n: integer to get last digit of
 *
 * Return: void
 */
@@ -22,4 +22,4 @@ int print_last_digit(int n)
 		_putchar(l + 48);
 		return (l);
 	}
-}}
+}
