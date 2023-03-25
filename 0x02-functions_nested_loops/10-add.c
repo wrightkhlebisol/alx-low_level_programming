@@ -1,13 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main - start the app
+* add - adds two integers and returns the result
 *
-* Return: 1
+* Return: integer
 */
 
-int main(void)
+int add(int a, int b)
 {
-	
-	return (1);
+	return (a + b);
 }
