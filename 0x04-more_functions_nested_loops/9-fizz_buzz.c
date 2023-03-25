@@ -17,11 +17,11 @@ int main(void)
 		{
 			printf("%s", "FizzBuzz");
 		}
-		else if ((i % 3 == 0))
+		else if (i % 3 == 0)
 		{
 			printf("%s", "Fizz");
 		}
-		else if ((i % 5 == 0))
+		else if (i % 5 == 0)
 		{
 			printf("%s", "Buzz");
 		}
@@ -35,5 +35,6 @@ int main(void)
 
 		printf("%s", " ");
 	}
+	printf("\n");
 	return (0);
 }
