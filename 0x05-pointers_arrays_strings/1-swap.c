@@ -1,13 +1,18 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main - start the app
-*
-* Return: 1
-*/
+ * swap_int - Swap the value of two integers.
+ * @a: Type int pointer
+ * @b: Type int pointer
+ * Return: Always 0.
+ */
 
-int main(void)
+void swap_int(int *a, int *b)
 {
-	
-	return (1);
+	int c;
+
+	c = *a;
+	*a = c;
+	*a = *b;
+	*b = c;
 }
