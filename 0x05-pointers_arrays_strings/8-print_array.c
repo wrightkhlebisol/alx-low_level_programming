@@ -1,13 +1,25 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main - start the app
-*
-* Return: 1
-*/
-
-int main(void)
+ * print_array - Print n elements of an array of int.
+ * @a: Type int pointer
+ * @n: Type int
+ * Return: Always 0.
+ */
+void print_array(int *a, int n)
 {
-	
-	return (1);
+	int b, num;
+
+	num = n - 1;
+
+	for (b = 0; b <= num; b++)
+	{
+		printf("%d", a[b]);
+
+		if (b < num)
+		{
+			printf(", ");
+		}
+	}
+	printf("\n");
 }
