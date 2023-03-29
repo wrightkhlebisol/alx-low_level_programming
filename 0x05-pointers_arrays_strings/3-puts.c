@@ -1,13 +1,19 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main - start the app
-*
-* Return: 1
-*/
-
-int main(void)
+ * _puts - Print a string, followed by a new line, to stdout.
+ * @str: Type char pointer
+ * Return: Always 0.
+ */
+void _puts(char *str)
 {
-	
-	return (1);
+	int a;
+	int let;
+
+	for (a = 0; str[a] != 0; a++)
+	{
+		let = str[a];
+		_putchar(let);
+	}
+	_putchar('\n');
 }
