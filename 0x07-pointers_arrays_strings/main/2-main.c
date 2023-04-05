@@ -1,5 +1,5 @@
 #include "../main.h"
-#include "../2-strchr.c"
+/* #include "../2-strchr.c" */
 #include <stdio.h>
 
 /**
