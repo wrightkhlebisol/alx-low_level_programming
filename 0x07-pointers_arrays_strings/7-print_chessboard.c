@@ -14,7 +14,7 @@ void print_chessboard(char (*a)[8])
 	{
 		unsigned long j = 0;
 
-		while (j < 8)
+		while (j < sizeof(a[i]))
 		{
 			_putchar(a[i][j]);
 			j++;
@@ -22,4 +22,5 @@ void print_chessboard(char (*a)[8])
 		_putchar('\n');
 		i++;
 	}
+	_putchar('\n');
 }
