@@ -1,6 +1,4 @@
 # include <stdio.h>
-# include "main.h"
-# include "_putchar.c"
 
 /**
 * main - Prints passed arguments
@@ -10,11 +8,12 @@
 * Return: integer
 */
 
-int main(int argc, char __attribute__((__unused__)) *argv[])
+int main(int argc, char *argv[])
 {
+	
 	while (argc--)
 	{
-		printf("%s\n", *argv++);
+		printf("%s\n", argv[argc]);
 	}
 	return (0);
 }
