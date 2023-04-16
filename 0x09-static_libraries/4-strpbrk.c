@@ -1,3 +1,6 @@
 #include "main.h"
 
-char *_strpbrk(char *s, char *accept);
+char *_strpbrk(__attribute__((__unused__)) char *s, __attribute__((__unused__)) char *accept)
+{
+	return (s);
+}

@@ -1,3 +1,21 @@
 #include "main.h"
+#include <stdio.h>
 
-int _strcmp(__attribute__((__unused__)) char *s1, __attribute__((__unused__)) char *s2);
+/**
+ * _strcmp - Function that compares two strings.
+ * @s1: type str
+ * @s2: type str
+ * Return: Always 0.
+ */
+int _strcmp(char *s1, char *s2)
+
+{
+	int a;
+
+	for (a = 0; s1[a] != '\0' && s2[a] != '\0'; a++)
+	{
+		if (s1[a] != s2[a])
+		return (s1[a] - s2[a]);
+	}
+	return (0);
+}
