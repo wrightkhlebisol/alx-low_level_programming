@@ -1,4 +1,3 @@
-#include <stdio.h>
+#include "main.h"
 
-void _puts(char *s)
-{}
+void _puts(__attribute__((__unused__)) char *s);
