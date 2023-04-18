@@ -1,6 +1,5 @@
 #include "dog.h"
 #include <stdlib.h>
-#include "main.h"
 
 /**
  * new_dog - creates a new pointer of dog_t type
