@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdarg.h>
+
 /**
  * print_numbers - Prints numbers separated by a separator string
  * @separator: The string to print between numbers
@@ -25,4 +28,3 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_end(args);
 }
-
