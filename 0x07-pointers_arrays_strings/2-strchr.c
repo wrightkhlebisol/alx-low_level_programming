@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -15,6 +16,11 @@ char *_strchr(char *s, char c)
 	while (s[i] != c)
 	{
 		i++;
+	}
+
+	if (s[i] == '\0')
+	{
+		return NULL;
 	}
 	return (s + i);
 }
