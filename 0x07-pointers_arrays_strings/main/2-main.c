@@ -1,5 +1,4 @@
 #include "../main.h"
-/* #include "../2-strchr.c" */
 #include <stdio.h>
 
 /**
@@ -9,10 +8,10 @@
  */
 int main(void)
 {
-    char *s = "hello";
+//    char *s = "hello";
     char *f;
 
-    f = _strchr(s, 'l');
+    f = _strchr("First, solve the problem. Then, write the code.", 'a');
 
     if (f != NULL)
     {
