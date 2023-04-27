@@ -9,13 +9,12 @@
 
 size_t list_len(const list_t *h)
 {
-	size_t count;
-	struct list_s *nextList;
+	size_t count = 0;
 
-	while (nextList != NULL)
+	while (h != NULL)
 	{
 		count++;
-		nextList = h->next;
+		h = h->next;
 	}
 	return (count);
 }
