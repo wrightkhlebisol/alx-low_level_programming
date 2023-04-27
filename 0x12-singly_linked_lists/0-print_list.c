@@ -1,23 +1,26 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
-* list_len - Returns number of elements in a linked list
+* print_list - Prints all elements of list_t list
 * @h: Pointer to list
 *
 * Return: size_t
 */
 
-size_t list_len(const list_t *h)
+size_t print_list(const list_t *h)
 {
-	size_t count;
-	struct list_s *nextList;
+	int count = 0;
 
-	while (*nextList)
+	while (h != NULL)
 	{
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
+		
 		count++;
-		if (*nextList == NULL)
-			break;
-		*nextList = h->next;
+		h = h->next;
 	}
 	return (count);
 }
