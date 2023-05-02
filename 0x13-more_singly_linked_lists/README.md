@@ -1,6 +1,6 @@
 # C - More singly linked lists
 
-### Data structure for this project 
+### Data structure for this project
 ```
 /**
  * struct listint_s - singly linked list
@@ -8,7 +8,7 @@
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- * 
+ *
  */
 typedef struct listint_s
 {
