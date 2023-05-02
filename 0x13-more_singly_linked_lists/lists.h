@@ -1,5 +1,6 @@
 #ifndef _MORE_LINKED_LIST_
 #define _MORE_LINKED_LIST_
+typedef unsigned long  size_t;
 
 /**
 * struct listint_s - singly linked list
