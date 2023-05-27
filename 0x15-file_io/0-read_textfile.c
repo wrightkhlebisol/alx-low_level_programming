@@ -11,17 +11,19 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	size_t i = 0;
+	FILE *fpt = NULL;
 
 	if (filename == NULL)
 		return (0);
-	FILE *fpt = fopen(filename, "r");
+	fpt = fopen(filename, "r");
 
 	if (!fpt)
 		return (0);
-	
+
 	while (i < letters)
 	{
 		char c = fgetc(fpt);
+
 		if (c == EOF)
 		{
 			break;
