@@ -157,6 +157,6 @@ int main(int argc, char *argv[])
 
 	filename = argv[1];
 	result = read_elf_header(filename);
-	
+
 	return (result);
 }
