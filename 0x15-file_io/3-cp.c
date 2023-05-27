@@ -18,8 +18,8 @@ void print_error(const char *message)
  */
 int copy_file(const char *file_from, const char *file_to)
 {
-	int fd_to = 0;
 	int fd_from = open(file_from, O_RDONLY);
+	int fd_to;
 	char buffer[BUFFER_SIZE];
 	ssize_t bytes_read, bytes_written;
 
@@ -29,8 +29,8 @@ int copy_file(const char *file_from, const char *file_to)
 		return (98);
 	}
 
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC,
-	S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR
+	| S_IWUSR | S_IRGRP | S_IROTH);
 
 	if (fd_to == -1)
 	{
@@ -61,7 +61,6 @@ int copy_file(const char *file_from, const char *file_to)
 
 	close(fd_from);
 	close(fd_to);
-
 	return (0);
 }
 
@@ -86,7 +85,7 @@ int main(int argc, char *argv[])
 
 	file_from = argv[1];
 	file_to = argv[2];
- 
+
 	result = copy_file(file_from, file_to);
 
 	return (result);
