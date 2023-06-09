@@ -27,7 +27,10 @@ int main(int argc, char __attribute__((unused)) **argv)
 
 	while (i < 5)
 	{
-		if (amount / change[i] )
+		if (amount / change[i] != 0)
+		{
+			continue;
+		}
 	}
 	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
