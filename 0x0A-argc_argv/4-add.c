@@ -17,9 +17,9 @@ int main(int argc, char __attribute__((unused)) **argv)
 		return (0);
 	}
 
-	while (i < argc)
+	while (i < (argc - 1))
 	{
-		if (atoi(argv[i + 1]))
+		if (!atoi(argv[i + 1]))
 		{
 			printf("Error\n");
 			return (1);
@@ -28,5 +28,6 @@ int main(int argc, char __attribute__((unused)) **argv)
 		i++;
 	}
 
+	printf("%d\n", sum);
 	return (sum);
 }
