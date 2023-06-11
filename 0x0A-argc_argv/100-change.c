@@ -9,15 +9,15 @@
  */
 int main(int argc, char __attribute__((unused)) **argv)
 {
-	int change[5] = {25, 10, 5, 2, 1}, i = 0;
+	int change[5] = {25, 10, 5, 2, 1}, i = 0, amount = 0;
 
-	if (argc < 1 || argc > 1)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	int amount = atoi(argv[1]);
+	amount = atoi(argv[1]);
 
 	if (amount < 0)
 	{
