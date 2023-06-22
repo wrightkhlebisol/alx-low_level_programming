@@ -15,5 +15,6 @@ int (*get_op_func(char __attribute__((unused)) *s))(int, int)
 		{NULL, NULL}
 	};
 	int i;
+
 	return (0);
 }
