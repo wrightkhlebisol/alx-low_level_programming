@@ -19,15 +19,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", "(nil)") :
 				printf("%s", tempval);
 			i++;
-			if (separator == NULL)
-				continue;
 			if (i == n)
 			{
 				printf("\n");
 				break;
 			}
+			if (separator == NULL)
+				continue;
 			printf("%s", separator);
 		}
 		va_end(ap);
 	}
+	else
+		printf("\n");
 }
