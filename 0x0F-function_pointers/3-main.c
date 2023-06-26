@@ -22,4 +22,5 @@ int main(int argc, char **argv)
 	opert = argv[2];
 	
 	printf("%d\n", get_op_func(opert)(opd_1, opd_2));
+	return (0);
 }
