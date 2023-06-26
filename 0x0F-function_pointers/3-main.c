@@ -20,6 +20,11 @@ int main(int argc, char **argv)
 	opd_2 = atoi(argv[3]);
 	opert = argv[2];
 
+	if (opert[1] != 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	printf("%d\n", get_op_func(opert)(opd_1, opd_2));
 	return (0);
 }
