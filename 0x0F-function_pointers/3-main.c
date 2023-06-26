@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	if (opert[1] != 0)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 	printf("%d\n", get_op_func(opert)(opd_1, opd_2));
 	return (0);
