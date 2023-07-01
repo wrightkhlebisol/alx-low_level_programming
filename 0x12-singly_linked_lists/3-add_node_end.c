@@ -45,11 +45,12 @@ list_t *add_node_end(list_t **head, const char *str)
 		while (*head != NULL)
 		{
 			list_t *temp = *head;
+
 			*head = (*head)->next;
 			if (*head == NULL)
 			{
 				new_node->next = NULL;
-				(*head)->next = new_node;
+				(*temp)->next = new_node;
 				break;
 			}
 		}
