@@ -22,10 +22,10 @@ int main(void)
         printf("Error\n");
         return (1);
     }
-    new->n = 9;
+    new->n = 0;
     new->next = head;
     head = new;
-    n = print_listint(head);
+    n = print_listint(NULL);
     printf("-> %lu elements\n", n);
     free(new);
     return (0);
