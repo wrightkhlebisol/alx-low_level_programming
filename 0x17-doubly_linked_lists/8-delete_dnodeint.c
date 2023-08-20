@@ -1,12 +1,11 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - Add node at index
- * @h: Head of node
+ * delete_dnodeint_at_index - Delete node at index
+ * @head: Head of node
  * @index: Index to add node at
- * @n: Node value
  *
- * Return: Pointer to new_node
+ * Return: positive int for success, negative for failure
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -20,7 +19,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		if (node_index == index)
 		{
-			if (node_index == 0 && *head != NULL)
+			if (node_index == 0)
 			{
 				*head = temp->next;
 				/** temp->next->prev = NULL; */
