@@ -27,17 +27,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_hash_t->next = NULL;
 
 	key_in = key_index((const unsigned char *)key, ht->size);
+	printf("%d\n", key_in);
 	ht_arr = ht->array;
 
 	if (ht_arr[key_in] == NULL)
+	{
 		ht_arr[key_in] = new_hash_t;
+		printf("if\n");
+	}
 	else
 	{
 		hash_node_t *temp = ht_arr[key_in];
 
 		while (temp->next != NULL)
+		{
 			temp = temp->next;
+		}
 		temp->next = new_hash_t;
+		printf("else %s\n", temp->value);
 	}
 	return (1);
 }
