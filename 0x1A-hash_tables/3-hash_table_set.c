@@ -9,42 +9,35 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_hash_t, **ht_arr;
+	hash_node_t *new_node_t, **ht_arr;
 	int key_in;
 
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 
-	new_hash_t = malloc(sizeof(hash_node_t));
-	if (new_hash_t == NULL)
+	new_node_t = malloc(sizeof(hash_node_t));
+	if (new_node_t == NULL)
 		return (0);
 
-	new_hash_t->key = malloc(sizeof(key));
-	new_hash_t->value = malloc(sizeof(value));
+	new_node_t->key = malloc(sizeof(key));
+	new_node_t->value = malloc(sizeof(value));
 
-	strcpy(new_hash_t->key, key);
-	strcpy(new_hash_t->value, value);
-	new_hash_t->next = NULL;
+	strcpy(new_node_t->key, key);
+	strcpy(new_node_t->value, value);
+	new_node_t->next = NULL;
 
 	key_in = key_index((const unsigned char *)key, ht->size);
-	printf("%d\n", key_in);
 	ht_arr = ht->array;
 
 	if (ht_arr[key_in] == NULL)
-	{
-		ht_arr[key_in] = new_hash_t;
-		printf("if\n");
-	}
+		ht_arr[key_in] = new_node_t;
 	else
 	{
 		hash_node_t *temp = ht_arr[key_in];
 
 		while (temp->next != NULL)
-		{
 			temp = temp->next;
-		}
-		temp->next = new_hash_t;
-		printf("else %s\n", temp->value);
+		temp->next = new_node_t;
 	}
 	return (1);
 }
