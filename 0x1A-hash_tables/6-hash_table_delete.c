@@ -14,7 +14,11 @@ void hash_table_delete(hash_table_t *ht)
 	while (ht_size > 0)
 	{
 		if (ht_array[ht_size] != NULL)
+		{
+			free(ht_array[ht_size]->key);
+			free(ht_array[ht_size]->value);
 			free(ht_array[ht_size]);
+		}
 		ht_size--;
 	}
 
