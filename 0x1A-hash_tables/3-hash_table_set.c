@@ -19,8 +19,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new_node_t == NULL)
 		return (0);
 
-	new_node_t->key = malloc(sizeof(key));
-	new_node_t->value = malloc(sizeof(value));
+	new_node_t->key = malloc(strlen(key) + 1);
+	new_node_t->value = malloc(strlen(value) + 1);
 
 	strcpy(new_node_t->key, key);
 	strcpy(new_node_t->value, value);
@@ -31,13 +31,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht_arr[key_in] == NULL)
 		ht_arr[key_in] = new_node_t;
+	else if (strcmp(ht_arr[key_in]->key, key) == 0)
+		ht_arr[key_in] = new_node_t;
 	else
 	{
-		hash_node_t *temp = ht_arr[key_in];
+		/* Handle collision with extended bucket */
+		hash_node_t *head = ht_arr[key_in];
 
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new_node_t;
+		new_node_t->next = head;
+		head = new_node_t;
 	}
 	return (1);
 }
