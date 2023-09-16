@@ -5,8 +5,8 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t **ht_arr = NULL;
-	unsigned long int ht_size = 0, i = 0, num_writ = 0;
+	hash_node_t **ht_arr = NULL, *head = NULL;
+	unsigned long int ht_size = 0, i = 0, n = 0;
 
 	if (ht == NULL)
 		return;
@@ -19,10 +19,17 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (ht_arr[i] != NULL)
 		{
-			if (num_writ > 0)
+			if (n == 1)
 				printf(", ");
-			printf("'%s': '%s'", ht_arr[i]->key, ht_arr[i]->value);
-			num_writ++;
+			/*check possible buckets*/
+
+			head = ht_arr[i];
+			while (head != NULL)
+			{
+				printf("'%s': '%s'", ht_arr[i]->key, ht_arr[i]->value);
+				n = 1;
+				head = head->next;
+			}
 		}
 		i++;
 	}
