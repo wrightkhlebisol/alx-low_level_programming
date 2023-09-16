@@ -40,6 +40,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 		new_node_t->next = head;
 		head = new_node_t;
+		ht_arr[key_in] = head;
 	}
 	return (1);
 }
