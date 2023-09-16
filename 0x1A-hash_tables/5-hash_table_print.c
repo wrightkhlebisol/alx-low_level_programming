@@ -19,13 +19,13 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (ht_arr[i] != NULL)
 		{
-			if (n == 1)
-				printf(", ");
 			/*check possible buckets*/
 
 			head = ht_arr[i];
 			while (head != NULL)
 			{
+				if (n == 1)
+					printf(", ");
 				printf("'%s': '%s'", head->key, head->value);
 				n = 1;
 				head = head->next;
