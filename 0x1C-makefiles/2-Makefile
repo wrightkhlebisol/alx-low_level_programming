@@ -7,7 +7,7 @@ all: $(OBJ)
 	$(CC) $(OBJ) -o school
 
 main.o: main.c
-	$(CC) -c -o $@ main.c
+	$(CC) -c -o main.o main.c
 
 school.o: school.c
-	$(CC) -c -o $@ school.c
+	$(CC) -c -o main.o school.c
