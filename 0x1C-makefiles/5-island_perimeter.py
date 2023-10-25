@@ -1,4 +1,13 @@
+#!/usr/bin/python3
+"""
+Island Perimter: Returns perimeter of islands in the grid
+"""
+
+
 def island_perimeter(grid):
+    """
+        Takes the grid and calculates
+    """
     height = len(grid)
     width = len(grid[0])
     perimeter = 0
