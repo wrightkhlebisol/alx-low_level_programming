@@ -1,5 +1,4 @@
 #include "search_algos.h"
-
 /**
  * binary_search - Check if value is in array in 0(log(n))
  * @array: Array to search
@@ -19,7 +18,7 @@ int binary_search(int *array, size_t size, int value)
 	{
 		mid = low + (high - low) / 2;
 
-		print_array_ind(low, high);
+		print_array_ind(array, low, high);
 		if (array[mid] == value)
 			return (mid);
 		else if (array[mid] > value)
@@ -30,23 +29,22 @@ int binary_search(int *array, size_t size, int value)
 		{
 			low = mid + 1;
 		}
-
 	}
-
 	return (-1);
 }
 
 /**
  * print_array_ind - Prints array from given start to end
+ * @arr: Array to iterate
  * @start: Start index of array
  * @end: End index of array
  */
-void print_array_ind(size_t start, size_t end)
+void print_array_ind(int *arr, size_t start, size_t end)
 {
 	printf("Searching in array: ");
 	while (start <= end)
 	{
-		printf("%ld", start);
+		printf("%d", arr[start]);
 		if (start != end)
 			printf(", ");
 		start += 1;
